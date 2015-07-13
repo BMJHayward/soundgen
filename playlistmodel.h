@@ -16,7 +16,7 @@ public:
         ColumnCount
         };
 
-    PlaylistModel(QObject *parent = 0);
+    PlaylistModel(QObject *parent);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     int columnCount(const QModelIndex &parent = QModelIndex()) const;
@@ -24,7 +24,7 @@ public:
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
     QModelIndex parent(const QModelIndex &child) const;
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole);
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
     QMediaPlaylist *playlist() const;
     void setPlaylist(QMediaPlaylist *playlist);
