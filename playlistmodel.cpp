@@ -35,7 +35,7 @@ QModelIndex PlaylistModel::parent(const QModelIndex &child) const
     return QModelIndex();
     }
 
-QVariant PlaylistModel::data(const QModelIndex &index, int role)
+QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 {
     if (index.isValid() && role == Qt::DisplayRole) {
         QVariant value = m_data[index];
