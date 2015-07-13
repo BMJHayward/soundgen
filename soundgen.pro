@@ -6,6 +6,8 @@ TEMPLATE = app
 TARGET = soundgen
 INCLUDEPATH += .
 
+QT += network xml multimedia multimediawidgets widgets
+
 # Input
 HEADERS += histogramwidget.h \
            player.h \
@@ -18,3 +20,10 @@ SOURCES += histogramwidget.cpp \
            playercontrols.cpp \
            playlistmodel.cpp \
            videowidget.cpp
+
+maemo* {
+    DEFINES += PLAYER_NO_COLOROPTIONS
+    }
+
+target.path = $$[QT_INSTALL_EXAMPLES]/multimediawidgets/player
+INSTALLS += target
