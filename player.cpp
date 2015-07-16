@@ -176,6 +176,14 @@ void Player::durationChanged(qint64 duration)
     slider->setMaximum(duration / 1000);
     }
 
+void Player::positionChanged(qint64 progress)
+{
+    if (!slider->isSliderDown()) {
+        slider->setValue(progress / 1000);
+        }
+    updateDurationInfo(progress / 1000);
+    }
+
 void Player::metaDataChanged()
 {
     if (player->isMetaDataAvailable()) {
