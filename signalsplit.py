@@ -5,8 +5,9 @@ import seaborn
 
 baseline = np.arange(1024)
 incoming = signal.chirp(baseline,0,baseline[511],3)
-plt.plot(baseline,incoming)
-plt.show()
+if input('would you like to see the graph?').lower() == 'yes':
+    plt.plot(baseline,incoming)
+    plt.show()
 channel1 = []
 channel2 = []
 threshold = 0.25
