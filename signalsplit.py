@@ -17,7 +17,11 @@ for point in incoming:
     else:
         channel2.append(point)
 
-for data in channel1:
-    print(data)
-for data in channel2:
-    print(data)
+def runsignal():
+    for data in channel1:
+        print(data)
+    for data in channel2:
+        print(data)
+
+while True:
+    runsignal()
