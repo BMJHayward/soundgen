@@ -20,9 +20,9 @@ for point in incoming:
 
 def runsignal():
     for data in channel1:
-        print(data)
+        print('Channel 1: ', data)
     for data in channel2:
-        print(data)
+        print('Channel 2: ',data)
 
 while True:
     runsignal()
