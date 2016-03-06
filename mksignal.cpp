@@ -6,6 +6,7 @@
 
 #include <QByteArray>
 #include <QAudioBuffer>
+#include <QAudioFormat>
 
 int main()
 {
@@ -18,14 +19,18 @@ int main()
     for (int i=0; i<10; ++i)
     {
         std::cout << dist(rand_gen) << std::endl;
-        char j = (char)(dist(rand_gen));
-        qarray.append(j);
+        char c = dist(rand_gen);
+        qarray.append(c);
     }
 
-    for (char k=0; k<qarray.size(); ++k)
+    for (int j=0; j<qarray.size(); ++j)
     {
-        std::cout << qarray[k] << std::endl;
+        std::cout << static_cast<unsigned>(qarray.at(j)) << std::endl;
     }
+
+    QAudioFormat format;
+    QAudioBuffer qaudbuffer(qarray, format);
+    std::cout << qaudbuffer.constData<int>() << std::endl;
 
     return 0;
 };
