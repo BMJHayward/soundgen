@@ -1,12 +1,31 @@
 #include <cmath>
+#include <cmath>
+#include <iomanip>
 #include <iostream>
+#include <map>
 #include <random>
 #include <string>
 #include <vector>
-
 #include <QByteArray>
 #include <QAudioBuffer>
 #include <QAudioFormat>
+
+
+std::map<int, int> gen_white()
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::normal_distribution<> d(5,2);
+
+    std::map<int, int> hist;
+    for(int n=0; n<10000; ++n)
+    {
+        ++hist[std::round(d(gen))];
+    }
+
+    return hist;
+}
+
 
 int main()
 {
