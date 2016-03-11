@@ -21,6 +21,7 @@ DATE_LAST_ACCESSED: 20160211
 #include <avr/io.h>
 #include <avr/pgmspace.h>
 #include <util/delay.h>
+#include "sounddata.h"
 
 void stopPlayback()
 {
