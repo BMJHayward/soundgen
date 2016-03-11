@@ -1,9 +1,9 @@
 /*
 To compile this on arduino uno:
-$ avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o eightbit_audio.o eightbit_audio.c
-$ avr-gcc -mmcu=atmega328p led.o -o led
-$ avr-objcopy -O ihex -R .eeprom led led.hex
-$ avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:led.hex
+$ avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o filename.o filename.c
+$ avr-gcc -mmcu=atmega328p filename.o -o filename 
+$ avr-objcopy -O ihex -R .eeprom filename filename.hex
+$ avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:filename.hex
  
 The first command line takes the C source file and compiles it into an object file. 
 The options tell the compilerto optimize for code size,what is the clock frequency (it’s useful for delay functions for example) 
@@ -41,5 +41,10 @@ void setup()
 void loop()
 {
     while (1);
+}
+
+int main()
+{
+    return 0;
 }
 
