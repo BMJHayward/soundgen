@@ -16,13 +16,32 @@ use 115200bps as the data rate.
 SOURCE: https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/
 DATE_LAST_ACCESSED: 20160211
 */
+#include <stdint.h>
+#include <avr/interrupt.h>
 #include <avr/io.h>
+#include <avr/pgmspace.h>
 #include <util/delay.h>
 
-int main (void)
+void stopPlayback()
 {
-    /* set pin 5 of PORTB for output */
-    DDRB |= _BV(DDB5);
+    return 0;
+}
 
+
+void startPlayback()
+{
+    return 0;
+}
+
+
+void setup()
+{
+    return 0;
+}
+
+
+void loop()
+{
+    while(true);
 }
 
