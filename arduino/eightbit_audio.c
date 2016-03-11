@@ -25,24 +25,21 @@ DATE_LAST_ACCESSED: 20160211
 
 void stopPlayback()
 {
-    return 0;
 }
 
 
 void startPlayback()
 {
-    return 0;
 }
 
 
 void setup()
 {
-    return 0;
 }
 
 
 void loop()
 {
-    while(true);
+    while (1);
 }
 
