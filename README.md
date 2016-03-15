@@ -13,3 +13,7 @@ To add in future:
   - multiplex noise with current sound playing on device
   - tinnitus masking
   - high frequency ear stimulation and training
+
+Also:
++ generating various signals in python
++ media player gui in C++ with qt
