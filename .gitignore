@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.o
 *.out
 *.gz
@@ -15,6 +14,7 @@
 *.o
 *.so
 *.pyc
+*.hex
 
 # Packages #
 ############
@@ -73,4 +73,4 @@ Thumbs.db
 
 # Misc #
 *.txt
->>>>>>> cc915bda13eaf9f06c0e9fae133a3b41452e8843
+*~
