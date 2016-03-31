@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     MusicPlayer player;
     const QStringList arguments = QCoreApplication::arguments();
     if (arguments.size() > 1)
-        player.palyFile(arguments.at(1));
+        player.playFile(arguments.at(1));
     player.resize(300, 60);
     player.show();
 

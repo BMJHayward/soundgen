@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = musicplayer
 
-QT += widgets multimedia winextras
+QT += widgets multimedia
 
 HEADERS = musicplayer.h volumebutton.h
 
@@ -11,5 +11,5 @@ RESOURCES += musicplayer.qrc
 
 RC_ICONS = images/musicplayer.ico
 
-target.path = $$[QT_INSTALL_EXAMPLES]/winextras/musicplayer
+target.path = $$[QT_INSTALL_EXAMPLES]/musicplayer
 INSTALLS += target

@@ -9,10 +9,6 @@ class VolumeButton;
 QT_FORWARD_DECLARE_CLASS(QLabel)
 QT_FORWARD_DECLARE_CLASS(QSlider)
 QT_FORWARD_DECLARE_CLASS(QAbstractButton)
-QT_FORWARD_DECLARE_CLASS(QWinTaskbarButton)
-QT_FORWARD_DECLARE_CLASS(QWinTaskbarProgress)
-QT_FORWARD_DECLARE_CLASS(QWinThumbnailToolBar)
-QT_FORWARD_DECLARE_CLASS(QWinThumbnailToolButton)
 
 
 class MusicPlayer : public QWidget
@@ -26,7 +22,7 @@ public slots:
     void playFile(const QString& filePath);
     void togglePlayback();
     void seekForward();
-    void seedBackward();
+    void seekBackward();
 
 protected:
     bool event(QEvent *event);
@@ -43,22 +39,10 @@ private slots:
     void updateInfo();
     void handleError();
 
-    void updateTaskbar();
-    void updateThumbnailToolBar();
 
 private:
     void createWidgets();
     void createShortcuts();
-    void createJumpList();
-    void createTaskbar();
-    void createThumbnailToolBar();
-
-    QWinTaskbarButton* taskbarButton;
-    QWinTaskbarProgress* taskbarProgress;
-    QWinThumbnailToolBar* thumbnailToolBar;
-    QWinThumbnailToolButton *playToolButton;
-    QWinThumbnailToolButton *forwardToolButton;
-    QWinThumbnailToolButton *backwardToolButton;
 
     QMediaPlayer mediaPlayer;
     QAbstractButton *playButton;

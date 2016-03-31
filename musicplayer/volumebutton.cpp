@@ -1,7 +1,8 @@
 #include "volumebutton.h"
 
+#include <QLabel>
+#include <QToolButton>
 #include <QtWidgets>
-#include <QtWinExtras>
 
 
 VolumeButton::VolumeButton(QWidget *parent) :
@@ -22,7 +23,7 @@ VolumeButton::VolumeButton(QWidget *parent) :
     label->setMinimumWidth(label->sizeHint().width());
 
     typedef void(QLabel::*IntSlot)(int);
-    connect(slider, &QAbstractSlider::valueChanged, label, static_cast<IntSlot>(&Qlabel::setNum));
+    connect(slider, &QAbstractSlider::valueChanged, label, static_cast<IntSlot>(&QLabel::setNum));
 
     QBoxLayout *popupLayout = new QHBoxLayout(popup);
     popupLayout->setMargin(2);
@@ -66,16 +67,4 @@ void VolumeButton::setVolume(int volume)
 
 void VolumeButton::stylize()
 {
-    if (QtWin::isCompositionEnabled())
-    {
-        QtWin::enableBlurBehindWindow(menu);
-        QString css("QMenu { border: 1px solid %1; border-radius: 2px; background: transparent; }");
-        menu->setStyleSheet(css.arg(QtWin::realColorizationColor().name()));
-    }
-    else
-    {
-        QtWin::disableBlurBehindWindow(menu);
-        QString css("QMenu { border: 1px solid black; background: %1; }");
-        menu->setStyleSheet(css.arg(QtWin::realColorizationColor().name()));
-    }
 }

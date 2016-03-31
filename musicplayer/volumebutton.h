@@ -1,7 +1,9 @@
 #ifndef VOLUMEBUTTON_H
 #define VOLUMEBUTTON_H
 
+#include <QLabel>
 #include <QToolButton>
+#include <QtWidgets>
 
 QT_FORWARD_DECLARE_CLASS(QMenu)
 QT_FORWARD_DECLARE_CLASS(QLabel)
