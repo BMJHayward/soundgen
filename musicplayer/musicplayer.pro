@@ -1,5 +1,6 @@
 TEMPLATE = app
 TARGET = musicplayer
+QMAKE_CXXFLAGS += -std=c++11
 
 QT += widgets multimedia
 
