@@ -1,6 +1,8 @@
+QMAKE_CXXFLAGS += -std=c++11
 TEMPLATE = app
 TARGET = soundgen
 INCLUDEPATH += .
+INCLUDEPATH += ../noises
 
 QT += network xml multimedia multimediawidgets widgets
 
@@ -16,7 +18,7 @@ SOURCES += histogramwidget.cpp \
            playercontrols.cpp \
            playlistmodel.cpp \
            videowidget.cpp
-SOURCES += mksignal.cpp
+SOURCES += ../noises/mksignal.cpp
 
 maemo* {
     DEFINES += PLAYER_NO_COLOROPTIONS

@@ -27,7 +27,7 @@ std::map<int, int> gen_white()
 }
 
 
-int main()
+int makeSignal()
 {
     std::random_device rand_dev;
     std::mt19937 rand_gen(rand_dev());
