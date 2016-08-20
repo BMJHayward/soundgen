@@ -16,12 +16,22 @@ use 115200bps as the data rate.
 SOURCE: https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/
 DATE_LAST_ACCESSED: 20160211
 */
-#include <stdint.h>
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <avr/pgmspace.h>
-#include <util/delay.h>
 #include "sounddata.h"
+#include <stdint.h>
+#include <stdlib.h>
+#include <time.h>
+#include <util/delay.h>
+
+
+int get_random()
+{
+    int r = rand();
+    return r;
+}
+
 
 void stopPlayback()
 {
@@ -41,9 +51,13 @@ void setup()
 void loop()
 {
     while (1);
+    {
+        get_random();
+    }
 }
 
-int main()
+
+int main(int argc, char** argv)
 {
     return 0;
 }
