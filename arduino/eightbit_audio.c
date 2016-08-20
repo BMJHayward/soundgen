@@ -16,6 +16,7 @@ use 115200bps as the data rate.
 SOURCE: https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/
 DATE_LAST_ACCESSED: 20160211
 */
+#include <Arduino.h>
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <avr/pgmspace.h>
@@ -25,6 +26,8 @@ DATE_LAST_ACCESSED: 20160211
 #include <time.h>
 #include <util/delay.h>
 
+#define speaker_pin 8
+
 
 int get_random()
 {
@@ -33,18 +36,9 @@ int get_random()
 }
 
 
-void stopPlayback()
-{
-}
-
-
-void startPlayback()
-{
-}
-
-
 void setup()
 {
+    pinMode(speaker_pin, OUTPUT);
 }
 
 
@@ -52,13 +46,15 @@ void loop()
 {
     while (1);
     {
-        get_random();
+        digital_write(speaker_pin, get_random());
     }
 }
 
 
 int main(int argc, char** argv)
 {
+    setup();
+    loop();
     return 0;
 }
 
