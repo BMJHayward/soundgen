@@ -1,4 +1,4 @@
-int piezo = 8;
+hutint piezo = 8;
 int duration = 250;
 int notes[] = {261, 293, 329, 349, 392, 440, 493, 523, 587, 659, 698, 783, 880};
 
